@@ -1,2 +1,2 @@
 # protractor-tutorial
-protractor tutorial
+protractor tutorials
