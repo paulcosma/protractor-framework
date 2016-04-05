@@ -1,3 +1,5 @@
+require('../page/CalculatorResult.js');
+
 var CalculatorHome = function(){
     // Locators
     var firstField = element(by.model('first'));
@@ -23,6 +25,7 @@ var CalculatorHome = function(){
     // click on Go button
     this.clickGoButton = function(){
         goButton.click();
+        return require('../page/CalculatorResult.js');
     };
 
 };
