@@ -1,4 +1,4 @@
-require('../page/CalculatorResult.js');
+require('../page/CalculatorResult.js'); // import next page used on return
 
 var CalculatorHome = function(){
     // Locators
@@ -25,7 +25,7 @@ var CalculatorHome = function(){
     // click on Go button
     this.clickGoButton = function(){
         goButton.click();
-        return require('../page/CalculatorResult.js');
+        return require('../page/CalculatorResult.js'); // this must be imported as well
     };
 
 };
