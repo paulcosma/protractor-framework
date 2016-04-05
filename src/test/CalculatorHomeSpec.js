@@ -1,8 +1,12 @@
 describe ('test the calculator demo site', function () {
 
     // import page object page
-    var calculatorHome  = require('/src/page/*Home.js');
+    var calculatorHome  = require('../page/CalculatorHome.js');
 
+    // beforeEach(function(){
+    //     calculatorHome.get();
+    //     });
+    //
     it ('test input field', function () {
         // use next line instead of import
         //var calculatorHome = new CalculatorHome();
@@ -35,6 +39,5 @@ describe ('test the calculator demo site', function () {
                 console.log("Result:= " + text);
             });
             expect(resultBinding.getText()).toEqual('3');
-
-    });
+        });
 });
