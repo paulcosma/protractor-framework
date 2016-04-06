@@ -6,7 +6,7 @@ describe ('test the calculator demo site', function () {
     // beforeEach(function(){
     //     calculatorHome.get();
     //     });
-    //
+
     it ('test input field', function () {
         // use next line instead of import
         //var calculatorHome = new CalculatorHome();
@@ -14,14 +14,9 @@ describe ('test the calculator demo site', function () {
         calculatorHome.get();
         calculatorHome.enterFirstFieldValue('1');
         calculatorHome.enterSecondFieldValue('2');
-        calculatorHome.clickGoButton();
 
-        // log the text of an element
-        var resultBinding  = element(by.binding('latest'));
-        resultBinding.getText().then(function(text) {
-            console.log("Result:= " + text);
-        });
-        expect(resultBinding.getText()).toEqual('3');
+        var calculatorResult = calculatorHome.clickGoButton();
+        expect(calculatorResult.getResultText()).toEqual('3');
     });
 
         // Ignore test using XIT
@@ -40,4 +35,5 @@ describe ('test the calculator demo site', function () {
             });
             expect(resultBinding.getText()).toEqual('3');
         });
+
 });
