@@ -7,12 +7,12 @@ var CalculatorResult = function(){
     // }
 
     this.getResultText = function(){
-        // return resultBinding.getText()
-        return resultBinding.getText().then(function(text) {
+                resultBinding.getText().then(function(text) {
             console.log("Result:= " + text);
+            return resultBinding.getText()
         });
     };
 
 };
 
-module.export = new CalculatorResult();
+module.exports = new CalculatorResult();

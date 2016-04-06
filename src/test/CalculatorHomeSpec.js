@@ -2,6 +2,7 @@ describe ('test the calculator demo site', function () {
 
     // import page object page
     var calculatorHome  = require('../page/CalculatorHome.js');
+    var calculatorResult = require('../page/CalculatorResult.js')
 
     // beforeEach(function(){
     //     calculatorHome.get();
@@ -15,7 +16,7 @@ describe ('test the calculator demo site', function () {
         calculatorHome.enterFirstFieldValue('1');
         calculatorHome.enterSecondFieldValue('2');
 
-        var calculatorResult = calculatorHome.clickGoButton();
+        calculatorResult = calculatorHome.clickGoButton();
         expect(calculatorResult.getResultText()).toEqual('3');
     });
 

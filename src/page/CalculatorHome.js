@@ -31,4 +31,4 @@ var CalculatorHome = function(){
 };
 
 // I am able to export this page
-module.export = new CalculatorHome();
+module.exports = new CalculatorHome();
