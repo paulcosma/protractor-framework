@@ -9,8 +9,8 @@ var CalculatorResult = function(){
     this.getResultText = function(){
                 resultBinding.getText().then(function(text) {
             console.log("Result:= " + text);
-            return resultBinding.getText()
         });
+        return resultBinding.getText();
     };
 
 };
