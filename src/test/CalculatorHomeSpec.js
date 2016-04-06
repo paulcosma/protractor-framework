@@ -18,6 +18,9 @@ describe ('test the calculator demo site', function () {
 
         calculatorResult = calculatorHome.clickGoButton();
         expect(calculatorResult.getResultText()).toEqual('3');
+        // calculatorResult.getResultText().then(function(value){
+        //     expect(value).toEqual('3');
+        // });
     });
 
         // Ignore test using XIT
