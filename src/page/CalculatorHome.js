@@ -5,6 +5,7 @@ var CalculatorHome = function () {
     var firstField = element(by.model('first'));
     var secondField = element(by.model('second'));
     var goButton = element(by.id('gobutton'));
+    var pageName = element(by.xpath('//h3'));
 
     // Methods
     // get Page
@@ -16,11 +17,15 @@ var CalculatorHome = function () {
     this.enterFirstFieldValue = function (value) {
         firstField.sendKeys(value);
     };
-    
+
     // set Value for Second field
     this.enterSecondFieldValue = function (value) {
         secondField.sendKeys(value);
     };
+
+    this.getPageName = function () {
+        return pageName.getText();
+    }
 
     // click on Go button
     this.clickGoButton = function () {
