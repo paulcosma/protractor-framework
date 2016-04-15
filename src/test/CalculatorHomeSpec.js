@@ -15,7 +15,8 @@ describe ('test the calculator demo site', function () {
         calculatorHome.get();
         calculatorHome.enterFirstFieldValue('1');
         calculatorHome.enterSecondFieldValue('2');
-
+        //browser.pause(); // Enter c to move the test forward by one task. Enter repl to enter interactive mode,  exit by pressing Ctrl-C
+        //browser.debugger(); // run test in debug mode with protractor debug conf.js
         calculatorResult = calculatorHome.clickGoButton();
         expect(calculatorResult.getResultText()).toEqual('3');
         // calculatorResult.getResultText().then(function(value){

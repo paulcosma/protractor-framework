@@ -1,6 +1,6 @@
 require('../page/CalculatorResult.js'); // import next page used on return
 
-var CalculatorHome = function(){
+var CalculatorHome = function () {
     // Locators
     var firstField = element(by.model('first'));
     var secondField = element(by.model('second'));
@@ -16,14 +16,14 @@ var CalculatorHome = function(){
     this.enterFirstFieldValue = function (value) {
         firstField.sendKeys(value);
     };
-
+    
     // set Value for Second field
     this.enterSecondFieldValue = function (value) {
         secondField.sendKeys(value);
     };
 
     // click on Go button
-    this.clickGoButton = function(){
+    this.clickGoButton = function () {
         goButton.click();
         return require('../page/CalculatorResult.js'); // this must be imported as well
     };
