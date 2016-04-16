@@ -1,3 +1,5 @@
+"use strict";
+
 describe ('test the calculator demo site', function () {
     it ('test input field', function () {
        browser.get("http://juliemr.github.io/protractor-demo/");

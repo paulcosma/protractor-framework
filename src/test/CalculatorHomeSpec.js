@@ -2,7 +2,7 @@ describe ('test the calculator demo site', function () {
 
     // import page object page
     var calculatorHome  = require('../page/CalculatorHome.js');
-    var calculatorResult = require('../page/CalculatorResult.js')
+    var calculatorResult = require('../page/CalculatorResult.js');
 
     // beforeEach(function(){
     //     calculatorHome.get();
@@ -27,7 +27,7 @@ describe ('test the calculator demo site', function () {
         // Ignore test using XIT
         xit ('test input field', function () {
             browser.get("http://juliemr.github.io/protractor-demo/");
-
+            
             element(by.model("first")).sendKeys("1");
             element(by.model("second")).sendKeys("2");
             element(by.id("gobutton")).click();

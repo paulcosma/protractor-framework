@@ -25,7 +25,7 @@ var CalculatorHome = function () {
 
     this.getPageName = function () {
         return pageName.getText();
-    }
+    };
 
     // click on Go button
     this.clickGoButton = function () {
