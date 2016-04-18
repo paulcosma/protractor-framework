@@ -2,7 +2,7 @@ describe ('test the calculator demo site', function () {
 
     // import page object page
     var calculatorHome  = require('../page/CalculatorHome.js');
-    var calculatorResult = require('../page/CalculatorResult.js')
+    var calculatorResult = require('../page/CalculatorResult.js');
 
     // beforeEach(function(){
     //     calculatorHome.get();
