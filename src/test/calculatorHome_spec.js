@@ -12,12 +12,13 @@ describe ('test the calculator demo site', function () {
         // use next line instead of import
         //var calculatorHome = new CalculatorHome();
 
-        calculatorHome.get();
-        calculatorHome.enterFirstFieldValue('1');
-        calculatorHome.enterSecondFieldValue('2');
+        calculatorResult = calculatorHome
+            .get()
+            .enterFirstFieldValue('1')
+            .enterSecondFieldValue('2')
+            .clickGoButton();
         //browser.pause(); // Enter c to move the test forward by one task. Enter repl to enter interactive mode and send WebDriver commands to your browser, exit by pressing Ctrl-C
         //browser.debugger(); // run test in debug mode
-        calculatorResult = calculatorHome.clickGoButton();
         expect(calculatorResult.getResultText()).toEqual('3');
         // calculatorResult.getResultText().then(function(value){
         //     expect(value).toEqual('3');

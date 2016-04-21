@@ -13,6 +13,7 @@ var CalculatorHome = function () {
      */
     this.get = function () {
         browser.get("http://juliemr.github.io/protractor-demo/");
+        return this;
     };
 
     /**
@@ -21,6 +22,7 @@ var CalculatorHome = function () {
      */
     this.enterFirstFieldValue = function (value) {
         firstField.sendKeys(value);
+        return this;
     };
 
     /**
@@ -29,6 +31,7 @@ var CalculatorHome = function () {
      */
     this.enterSecondFieldValue = function (value) {
         secondField.sendKeys(value);
+        return this;
     };
 
     /**
