@@ -1,2 +1,2 @@
 # protractor-tutorial
-protractor tutorials
+protractor examples
