@@ -1,6 +1,6 @@
 // file myTest.js
-var po = require('mypageobject.js')
+var po = require('mypageobject.js');
 
 po.addressInput
     .clear()
-    .sendKeys('123')
+    .sendKeys('123');
