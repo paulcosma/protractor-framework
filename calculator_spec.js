@@ -1,8 +1,9 @@
+/* global require,element,by,browser,console,exports,module */
 "use strict";
 
-describe ('test the calculator demo site', function () {
-    it ('test input field', function () {
-       browser.get("http://juliemr.github.io/protractor-demo/");
+describe('test the calculator demo site', function () {
+    it('test input field', function () {
+        browser.get("http://juliemr.github.io/protractor-demo/");
 
         element(by.model("first")).sendKeys("1");
         element(by.model("second")).sendKeys("2");
@@ -10,8 +11,8 @@ describe ('test the calculator demo site', function () {
         //browser.debugger(); // run test in debug mode with protractor debug conf.js
         element(by.id("gobutton")).click();
         // log the text of an element
-        var resultBinding  = element(by.binding('latest'));
-        resultBinding.getText().then(function(text) {
+        var resultBinding = element(by.binding('latest'));
+        resultBinding.getText().then(function (text) {
             console.log("Result:= " + text);
         });
         expect(resultBinding.getText()).toEqual('3');

@@ -14,7 +14,7 @@ exports.config = {
     framework: 'jasmine',
 
     // Spec patterns are relative to the current working directory when protractor is called.
-  //  specs: ['../test/*_spec.js'],
+    //  specs: ['../test/*_spec.js'],
 
     suites: {
         homepage: '../test/*_spec.js',

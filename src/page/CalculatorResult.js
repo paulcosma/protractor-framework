@@ -1,6 +1,7 @@
-var CalculatorResult = function(){
-
-    var resultBinding  = element(by.binding('latest'));
+/* global require,element,by,browser,console,exports,module */
+var CalculatorResult = function () {
+    'use strict';
+    var resultBinding = element(by.binding('latest'));
 
     // this.selectFromDropDown = function(){
     //     element(by.model('name')).$('[value="' + index + '"]').click();
@@ -11,8 +12,8 @@ var CalculatorResult = function(){
      *
      * @returns {webdriver.promise.Promise<string>}
      */
-    this.getResultText = function(){
-                resultBinding.getText().then(function(text) {
+    this.getResultText = function () {
+        resultBinding.getText().then(function (text) {
             console.log("Result:= " + text);
         });
         return resultBinding.getText();

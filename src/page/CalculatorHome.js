@@ -1,6 +1,8 @@
+/* global require,element,by,browser,console,exports,module */
 require('../page/CalculatorResult.js'); // import next page used on return
 
 var CalculatorHome = function () {
+    'use strict';
     // Locators
     var firstField = element(by.model('first'));
     var secondField = element(by.model('second'));
