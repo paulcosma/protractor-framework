@@ -1,0 +1,22 @@
+{
+  "name": "protractor-framework",
+  "version": "1.0.0",
+  "description": "Protractor Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulcosma/protractor-framework.git"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "paulcosma@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulcosma/protractor-framework/issues"
+  },
+  "homepage": "https://github.com/paulcosma/protractor-framework#readme"
+}
