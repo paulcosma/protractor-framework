@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/paulcosma/protractor-framework/issues"
   },
-  "homepage": "https://github.com/paulcosma/protractor-framework#readme"
+  "homepage": "https://github.com/paulcosma/protractor-framework#readme",
+  "dependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-reporters": "^2.3.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.4.2",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+  }
 }
