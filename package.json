@@ -4,7 +4,7 @@
   "description": "Protractor Framework",
   "main": "index.js",
   "scripts": {
-    "test": "protractor -v"
+    "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/calculator/conf/baseConf.js --suite=allTests || exit 0"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,5 @@
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.2",
     "protractor-jasmine2-screenshot-reporter": "^0.5.0"
-  },
-  "scripts": {
-    "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/calculator/conf/baseConf.js --suite=allTests || exit 0"
   }
 }

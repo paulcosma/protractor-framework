@@ -14,6 +14,8 @@ var reporter = new HtmlScreenshotReporter({
 
 // Base configuration file.
 exports.config = {
+    SELENIUM_PROMISE_MANAGER: true,
+
     //If true, Protractor will connect directly to the browser Drivers.
     directConnect: true,
 
@@ -24,7 +26,7 @@ exports.config = {
             'args': ['--start-maximized']
         },
         'shardTestFiles': true, // change consolidateAll to false if shardTestFiles = true (in order for reports to display all tests)
-        'maxInstances': 3
+        'maxInstances': 1
     },
 
     // If true, protractor will restart the browser between each test.
