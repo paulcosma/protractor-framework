@@ -1,7 +1,8 @@
 /* global protractor,describe,require,it,expect,element,by,browser */
-describe('Protractor Demo App', function() {
+describe('Protractor Calculator Demo App', function() {
     it('should load from valid link', function() {
         browser.get('https://calculator.paulcosma.com/');
+        // browser.pause();
         expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
     });
 });
