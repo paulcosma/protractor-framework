@@ -8,6 +8,7 @@ describe('Protractor Calculator Demo App', function() {
     it('should load from valid link', async function() {
         await browser.get('https://calculator.paulcosma.com/');
         console.log("Angular version = " +  await browser.executeScript(getAngularVersion));
+        // debugger;
         await expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
     });
 
