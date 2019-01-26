@@ -12,7 +12,6 @@ var ENV = '';
 // Application: "calculator", "angular"
 var APP = "calculator";
 
-// or local, on project folder '../../../../../node_modules/'
 var npmNodeModulesPath = '../../../../../node_modules/';
 
 module.exports = {
