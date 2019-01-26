@@ -14,7 +14,7 @@ var reporter = new HtmlScreenshotReporter({
 
 // Base configuration file.
 exports.config = {
-    SELENIUM_PROMISE_MANAGER: true,
+    SELENIUM_PROMISE_MANAGER: false,
 
     //If true, Protractor will connect directly to the browser Drivers.
     directConnect: true,

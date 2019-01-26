@@ -5,13 +5,10 @@ describe('Protractor Calculator Demo App', function() {
         return window.angular.version.full;
     }
 
-    it('should load from valid link', function() {
-        browser.get('https://calculator.paulcosma.com/');
-        // browser.pause();
-        browser.executeScript(getAngularVersion).then(function (version) {
-            console.log("Angular version = " + version);
-        });
-        expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
+    it('should load from valid link', async function() {
+        await browser.get('https://calculator.paulcosma.com/');
+        console.log("Angular version = " +  await browser.executeScript(getAngularVersion));
+        await expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
     });
 
 
