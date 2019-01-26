@@ -6,7 +6,8 @@
  * "-integ" for Integration environment
  * "-test" for Test environment
  */
-var ENV = process.env.NODE_ENV || '';
+// var ENV = process.env.NODE_ENV || '';
+var ENV = '';
 
 // Application: "calculator", "angular"
 var APP = "calculator";
