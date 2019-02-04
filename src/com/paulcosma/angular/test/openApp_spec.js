@@ -2,19 +2,14 @@
 'use strict';
 var env = require('../conf/environment.js');
 
-xdescribe('Protractor Angular Demo App', function() {
+describe('Protractor Angular Demo App', function() {
 
-    function getAngularVersion() {
-        return window.getAllAngularRootElements()[0].attributes["ng-version"];
-    }
+    var homePage = require('../page/HomePage.js');
 
     it('should load from valid link', function() {
-        browser.get(env.URL);
-        // browser.pause();
-        browser.executeScript(getAngularVersion).then(function (version) {
-            console.log("Angular version = " + JSON.stringify(require('util').inspect(version.value)));
-        });
-        expect(browser.getCurrentUrl()).toEqual('https://angular.paulcosma.com/');
+        homePage
+            .get();
+        expect(browser.getCurrentUrl()).toEqual('http://angular.paulcosma.com/');
     });
 
 });

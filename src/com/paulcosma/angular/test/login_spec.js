@@ -4,11 +4,17 @@ var env = require('../conf/environment.js');
 
 describe('Protractor Angular Demo App', function() {
 
-       it('should load from valid link', function() {
-        browser.get(env.URL);
-        element(by.xpath("//*[@routerlink='/login']")).click();
-        // browser.pause();
-        // expect(browser.getCurrentUrl()).toEqual('https://angular.paulcosma.com/');
+    var homePage = require('../page/HomePage.js');
+
+    it('login and verify articles', function() {
+        var article = homePage
+            .get()
+            .clickSignInButton()
+            .enterEmail("workshop@protractor.org")
+            .enterPassword("protractorworkshop")
+            .clickSignInButton()
+            .getArticlePreviewText();
+        expect(article).toEqual('No articles are here... yet.');
     });
 
 });
