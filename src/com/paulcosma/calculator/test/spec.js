@@ -2,6 +2,7 @@
 describe('Protractor Demo App', function() {
     it('should load from valid link', function() {
         browser.get('https://calculator.paulcosma.com/');
+        // browser.pause();
         expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
     });
 });
