@@ -4,7 +4,7 @@
   "description": "Protractor Framework",
   "main": "index.js",
   "scripts": {
-    "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/calculator/conf/baseConf.js --suite=allTests || exit 0"
+    "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/chromeConf.js --suite=allTests || exit 0"
   },
   "repository": {
     "type": "git",
