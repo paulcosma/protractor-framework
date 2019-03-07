@@ -1,6 +1,7 @@
 /* global require,element,by,browser,console,exports,module */
 // imports
-require('../page/Login.js'); // import next page used on return
+require('../page/Login.js');
+require('../page/Register.js');// import next page used on return
 var conf = require('../conf/chromeConf.js').config;
 
 var HomePage = function () {
@@ -34,6 +35,15 @@ var HomePage = function () {
     this.clickSignInButton = function () {
         signInButton.click();
         return require('../page/Login.js');
+    };
+
+    /**
+     * click on SignUp button. Register page will open
+     * @returns {Login}
+     */
+    this.clickSignUpButton = function () {
+        signUpButton.click();
+        return require('../page/Register.js');
     };
 
 };
