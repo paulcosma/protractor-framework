@@ -3,7 +3,7 @@
 var env = require('../conf/environment.js');
 var utils = require('../common/utils.js');
 
-describe('Register testss suite', function() {
+describe('Register tests suite', function() {
 
     var homePage = require('../page/HomePage.js');
 
