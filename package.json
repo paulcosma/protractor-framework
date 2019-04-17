@@ -4,6 +4,7 @@
   "description": "Protractor Framework",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install && node node_modules/protractor/bin/webdriver-manager update && node node_modules/protractor/bin/webdriver-manager update --ie32 && node node_modules/protractor/bin/webdriver-manager update --ie",
     "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/calculator/conf/chromeConf.js --suite=allTests || exit 0"
   },
   "repository": {

@@ -12,5 +12,4 @@ describe('Protractor Calculator Demo App', function() {
         await expect(browser.getCurrentUrl()).toEqual('https://calculator.paulcosma.com/');
     });
 
-
 });
