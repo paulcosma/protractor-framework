@@ -4,7 +4,16 @@
   "description": "Protractor Framework",
   "main": "index.js",
   "scripts": {
-    "all-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/chromeConf.js --suite=allTests || exit 0"
+    "setup": "npm install && node node_modules/protractor/bin/webdriver-manager update && node node_modules/protractor/bin/webdriver-manager update --ie32 && node node_modules/protractor/bin/webdriver-manager update --ie",
+    "webdriver-start": "node node_modules/protractor/bin/webdriver-manager start",
+    "test": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/chrome.conf.js --suite=allTests || exit 0",
+    "calculator-tests": "node node_modules/protractor/bin/protractor src/com/paulcosma/calculator/conf/chrome.conf.js --suite=allTests || exit 0",
+    "chrome": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/chrome.conf.js --suite=allTests || exit 0",
+    "firefox": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/firefox.conf.js --suite=allTests || exit 0",
+    "firefoxWin7": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/firefoxWin7.conf.js --suite=allTests || exit 0",
+    "ie11": "node node_modules/protractor/bin/protractor src/com/paulcosma/angular/conf/ie11.conf.js --suite=allTests || exit 0",
+    "allure": "allure generate test-output/allure-results --clean -o test-output/allure-report || true",
+    "allure-clean": "rm -rf test-output/allure-report && allure generate test-output/allure-results --clean -o test-output/allure-report || true"
   },
   "repository": {
     "type": "git",
@@ -20,10 +29,14 @@
   },
   "homepage": "https://github.com/paulcosma/protractor-framework#readme",
   "dependencies": {
-    "jasmine": "2.8.0",
+    "jasmine": "3.3.1",
+    "jasmine-allure-reporter": "1.0.2",
     "jasmine-reporters": "2.3.2",
     "jasmine-spec-reporter": "4.2.1",
     "protractor": "5.4.2",
     "protractor-jasmine2-screenshot-reporter": "0.5.0"
+  },
+  "devDependencies": {
+    "allure-commandline": "2.9.0"
   }
 }

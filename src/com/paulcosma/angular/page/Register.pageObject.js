@@ -1,14 +1,14 @@
 /* global require,element,by,browser,console,exports,module */
 // imports
-require('../page/Login.js'); // import next page used on return
+require('./Login.pageObject.js'); // import next page used on return
 
-var Register = function () {
+let Register = function () {
     "use strict";
     // Locators
-    var usernameField = element(by.css("[ng-reflect-name='username']"));
-    var emailField = element(by.css("[ng-reflect-name='email']"));
-    var passwordField = element(by.css("[ng-reflect-name='password']"));
-    var signUpButton = element(by.css('.btn[type="submit"]'));
+    let usernameField = element(by.css("[ng-reflect-name='username']"));
+    let emailField = element(by.css("[ng-reflect-name='email']"));
+    let passwordField = element(by.css("[ng-reflect-name='password']"));
+    let signUpButton = element(by.css('.btn[type="submit"]'));
 
     // Methods
     this.enterUsername = function (user) {
@@ -37,7 +37,7 @@ var Register = function () {
 
     this.clickSignUpButton = function () {
         signUpButton.click();
-        return require('../page/YourFeed.js');
+        return require('./YourFeed.pageObject.js');
     };
 
 };

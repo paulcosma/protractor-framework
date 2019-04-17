@@ -7,12 +7,12 @@
  * "-test" for Test environment
  */
 // var ENV = process.env.NODE_ENV || '';
-var ENV = '';
+const ENV = '';
 
 // Application: "calculator", "angular"
-var APP = "angular";
+const APP = "angular";
 
-var npmNodeModulesPath = '../../../../../node_modules/';
+const npmNodeModulesPath = '../../../../../node_modules/';
 
 module.exports = {
     APP_NAME: APP,

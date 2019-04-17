@@ -52,7 +52,7 @@ exports.config = {
     // When run without a command line parameter, all suites will run
     suites: {
         allTests: [
-            '../test/*_spec.js'
+            '../test/*.spec.js'
         ]
     },
     // Use a specific suite by default instead of all suites.

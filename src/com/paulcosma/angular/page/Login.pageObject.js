@@ -1,13 +1,13 @@
 /* global require,element,by,browser,console,exports,module */
 // imports
-require('../page/Login.js'); // import next page used on return
+require('./Login.pageObject.js'); // import next page used on return
 
-var Login = function () {
+let Login = function () {
     "use strict";
     // Locators
-    var emailField = element(by.xpath("//*[@formcontrolname='email']"));
-    var passwordField = element(by.css('[formcontrolname="password"]'));
-    var signInButton = element(by.css('.btn[type="submit"]'));
+    let emailField = element(by.xpath("//*[@formcontrolname='email']"));
+    let passwordField = element(by.css('[formcontrolname="password"]'));
+    let signInButton = element(by.css('.btn[type="submit"]'));
 
     // Methods
     this.enterEmail = function (email) {
@@ -28,7 +28,7 @@ var Login = function () {
 
     this.clickSignInButton = function () {
         signInButton.click();
-        return require('../page/YourFeed.js');
+        return require('./YourFeed.pageObject.js');
     };
 
 };

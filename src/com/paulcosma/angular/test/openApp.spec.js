@@ -1,10 +1,9 @@
 /* global protractor,describe,require,it,expect,element,by,browser */
 'use strict';
-var env = require('../conf/environment.js');
 
 describe('Protractor Angular Demo App', function() {
 
-    var homePage = require('../page/HomePage.js');
+    let homePage = require('../page/HomePage.pageObject.js');
 
     it('should load from valid link', function() {
         homePage

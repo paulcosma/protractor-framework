@@ -1,15 +1,15 @@
 /* global require,element,by,browser,console,exports,module */
 // imports
-require('../page/Login.js');
-require('../page/Register.js');// import next page used on return
-var conf = require('../conf/chromeConf.js').config;
+require('./Login.pageObject.js');
+require('./Register.pageObject.js');// import next page used on return
+let conf = require('../conf/chrome.conf.js').config;
 
-var HomePage = function () {
+let HomePage = function () {
     "use strict";
     // Locators
-    var homeButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/']"));
-    var signInButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/login']"));
-    var signUpButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/register']"));
+    let homeButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/']"));
+    let signInButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/login']"));
+    let signUpButton = element(by.xpath("//*[@class='nav-link' and @routerlink='/register']"));
 
     // Methods
     /**
@@ -19,7 +19,7 @@ var HomePage = function () {
     this.get = function () {
         console.log("baseURL = " + conf.baseUrl);
         browser.get(conf.baseUrl);
-        var getAngularVersion = function() {
+        let getAngularVersion = function() {
             return window.getAllAngularRootElements()[0].attributes["ng-version"];
         };
         browser.executeScript(getAngularVersion).then(function (version) {
@@ -34,7 +34,7 @@ var HomePage = function () {
      */
     this.clickSignInButton = function () {
         signInButton.click();
-        return require('../page/Login.js');
+        return require('./Login.pageObject.js');
     };
 
     /**
@@ -43,7 +43,7 @@ var HomePage = function () {
      */
     this.clickSignUpButton = function () {
         signUpButton.click();
-        return require('../page/Register.js');
+        return require('./Register.pageObject.js');
     };
 
 };
